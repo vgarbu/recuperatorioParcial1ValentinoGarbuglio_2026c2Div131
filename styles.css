@@ -1,0 +1,268 @@
+:root {
+    --color-primario: firebrick;
+    --gris-oscuro: #dddddd;
+    --gris-claro: #fbfbfb;
+    --color-secundario: #fbeaea;
+    --texto: #292929;
+}
+
+body {
+    margin: 0;
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #ffffff;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 10px 12px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 12px 0 4px;
+}
+
+main {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.catalogo {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.topbar h1:focus-visible {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 3px;
+}
+
+.cart-counter {
+    color: var(--color-primario);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.barra {
+    height: 1px;
+    background: var(--gris-oscuro);
+    margin: 10px 0;
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(170px, 0.75fr);
+    gap: 8px 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+}
+
+.categorias label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+input[type="radio"] {
+    accent-color: var(--color-primario);
+    margin: 0;
+}
+
+#buscador,
+#orden-precio {
+    min-width: 0;
+    padding: 6px 8px;
+    background: #ffffff;
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 2px;
+    font: inherit;
+}
+
+#buscador {
+    width: 100%;
+    font-style: italic;
+}
+
+#orden-precio {
+    grid-column: 1;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.product-card {
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 0;
+    transition: background-color 0.15s ease;
+}
+
+.product-card:hover {
+    background-color: var(--color-secundario);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.product-card h3 {
+    font-size: 15px;
+    margin: 8px 0 4px;
+}
+
+.product-card .descripcion {
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.35;
+    min-height: 32px;
+    margin: 0 0 5px;
+}
+
+.precio {
+    color: var(--color-primario);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0 8px;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+}
+
+.btn-agregar {
+    display: block;
+    width: 100%;
+    padding: 7px 4px;
+    border: 0;
+    color: #ffffff;
+    background: var(--color-primario);
+    font-size: 11px;
+}
+
+.btn-agregar:hover:not(:disabled) {
+    filter: brightness(0.9);
+}
+
+.btn-agregar:disabled {
+    background: #dddddd;
+    color: #888888;
+    cursor: not-allowed;
+}
+
+.carrito {
+    flex: 0 0 270px;
+    padding: 12px;
+    background: var(--gris-claro);
+    border: 1px solid #e5e5e5;
+}
+
+.carrito h2 {
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+#cart-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 12px;
+}
+
+.cart-item-name {
+    overflow-wrap: anywhere;
+}
+
+.cart-item-subtotal {
+    white-space: nowrap;
+}
+
+.btn-quitar {
+    border: 1px solid var(--color-primario);
+    background: #ffffff;
+    color: var(--color-primario);
+    padding: 3px 5px;
+    font-size: 10px;
+}
+
+.total {
+    margin: 16px 0;
+    font-size: 15px;
+}
+
+.btn-vaciar {
+    width: 100%;
+    padding: 7px;
+    background: #ffffff;
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    font-size: 12px;
+}
+
+.btn-vaciar:hover {
+    background: var(--color-secundario);
+}
+
+.carrito-vacio,
+.sin-resultados,
+.instruccion {
+    color: #777777;
+    font-size: 13px;
+}
+
+.sin-resultados {
+    grid-column: 1 / -1;
+}
