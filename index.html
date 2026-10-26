@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger House | Tienda online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2>Parcial 1 - División: 131</h2>
+    </header>
+
+    <main>
+        <div class="layout">
+            <section class="catalogo" aria-label="Catálogo de hamburguesas">
+                <div class="topbar">
+                    <h1 id="burger-house" tabindex="0" role="button" title="Hacé clic para mostrar los productos">Burger House</h1>
+                    <span class="cart-counter" id="cart-counter">Carrito (0)</span>
+                </div>
+
+                <div class="barra"></div>
+
+                <div class="tools">
+                    <div class="categorias" role="group" aria-label="Filtrar por categoría">
+                        <label>
+                            <input type="radio" name="categoria" value="Todas" checked>
+                            Todas
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" value="Clásicas">
+                            Clásicas
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" value="Especiales">
+                            Especiales
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" value="Combos">
+                            Combos
+                        </label>
+                    </div>
+
+                    <input type="search" id="buscador" placeholder="Buscar productos" aria-label="Buscar productos">
+
+                    <select id="orden-precio" aria-label="Ordenar por precio">
+                        <option value="default">Ordenar por precio</option>
+                        <option value="menor">Menor precio</option>
+                        <option value="mayor">Mayor precio</option>
+                    </select>
+                </div>
+
+                <section id="products-container" class="products-grid" aria-live="polite">
+                    <p class="instruccion">Hacé clic en <strong>Burger House</strong> para ver todos los productos.</p>
+                </section>
+            </section>
+
+            <aside class="carrito">
+                <h2>Mi carrito</h2>
+                <ul id="cart-list"></ul>
+                <p class="total">Total: <strong id="cart-total">$ 0</strong></p>
+                <button id="vaciar-carrito" class="btn-vaciar" type="button">VACIAR CARRITO</button>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Valentino Garbuglio</p>
+    </footer>
+</body>
+</html>
